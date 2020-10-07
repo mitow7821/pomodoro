@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="icons/css/fontello.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/ico" href="favIncon.ico">
+</head>
+
+<body>
+    <div class="box">
+        <div class="box__circle">
+            <div class="content">
+                <span class="content__start">START</span>
+
+                <div class="settings hidden">
+                    <div class="settings__item">
+                        <span class="settings__heading">Time:</span>
+                        <input class="settings__input settings__input--time" type="number" value="25">
+                    </div>
+                    <div class="settings__item">
+                        <span class="settings__heading">Break:</span>
+                        <input class="settings__input settings__input--break" type="number" value="5">
+                    </div>
+                    <div class="settings__item">
+                        <span class="settings__heading">Cycles:</span>
+                        <input class="settings__input settings__input--cycles" type="number" value="1">
+                    </div>
+                    <div class="settings__item">
+                        <a class="settings__save" href="#">Save</a>
+                    </div>
+                </div>
+
+                <p class="content__info hidden">
+                    The Pomodoro Technique is a time management method, which uses a timer to
+                    break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each
+                    interval is known as a pomodoro.
+                    <br>
+                    <a class="content__back">Go back</a>
+                </p>
+                <span class="content__countdown"></span>
+            </div>
+        </div>
+        <!-- Icons -->
+        <i class="box__icon icon-volume-up"></i>
+        <i class="box__icon icon-volume-off hidden"></i>
+        <i class="box__icon icon-cog"></i>
+        <i class="box__icon icon-info"></i>
+        <i class="cycles"></i>
+    </div>
+</body>
+</body>
+
+</html>

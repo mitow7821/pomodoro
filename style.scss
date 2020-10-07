@@ -1,0 +1,217 @@
+.hidden {
+    display: none !important;
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin fontStyle {
+    color: #fff;
+    font-size: 3.5rem;
+    letter-spacing: 7px;
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-size: 2vh;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Righteous", cursive;
+    user-select: none;
+}
+.box {
+    @include center;
+    width: 80vw;
+    height: 80vw;
+    background-color: #ff5050;
+    border-radius: 40px;
+    box-shadow: 5px 5px 25px #555;
+    &__circle {
+        @include center;
+        border: 1rem solid #fff;
+        width: 70%;
+        height: 70%;
+        border-radius: 50%;
+    }
+    .content {
+        @include center;
+        &__start {
+            @include fontStyle;
+            padding: 40px;
+            transition: font-size ease-in-out 0.2s;
+            &:hover {
+                transition: font-size ease-in-out 0.2s;
+                font-size: 3.7rem;
+                cursor: pointer;
+            }
+        }
+        .settings {
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+            &__heading {
+                letter-spacing: 7px;
+                display: block;
+                padding-top: 1.4rem;
+                padding-bottom: 0.6rem;
+            }
+            &__input {
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #fff;
+                outline: none;
+                color: #fff;
+                font-size: 1rem;
+                width: 30%;
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                &[type="number"] {
+                    -moz-appearance: textfield;
+                }
+            }
+            &__save {
+                display: inline-block;
+                margin-top: 2rem;
+                position: relative;
+                font-size: 1.4rem;
+                color: #fff;
+                text-decoration: none;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -10%;
+                    left: -20%;
+                    display: block;
+                    background-color: #fff;
+                    height: 1px;
+                    width: 0%;
+                    transition: width ease-in-out 0.3s;
+                }
+                &:hover::after {
+                    transition: width ease-in-out 0.3s;
+                    width: 140%;
+                }
+            }
+        }
+        &__info {
+            color: #fff;
+            display: block;
+            text-align: justify;
+            font-size: 1rem;
+        }
+        &__back {
+            margin-top: 1rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &__countdown {
+            @include fontStyle;
+            display: block;
+            text-align: center;
+        }
+        &__current {
+            font-size: 1.5rem;
+        }
+        &__done{
+            @include fontStyle;
+            padding: 40px;
+            transition: font-size ease-in-out 0.2s;
+            text-decoration: none;
+            &:hover {
+                transition: font-size ease-in-out 0.2s;
+                font-size: 3.7rem;
+                cursor: pointer;
+            }
+        }
+    }
+    &__icon {
+        color: #fff;
+        font-size: 3rem;
+        position: absolute;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .icon-volume-up {
+        top: 7%;
+        left: 7%;
+    }
+    .icon-volume-off {
+        top: 7%;
+        left: 5%;
+    }
+    .icon-cog {
+        top: 7%;
+        right: 7%;
+    }
+    .icon-info {
+        bottom: 7%;
+        right: 7%;
+    }
+    .cycles {
+        color: #fff;
+        font-size: 2.5rem;
+        position: absolute;
+        top: 7%;
+        right: 7%;
+    }
+}
+
+@media (orientation: landscape) {
+    .box {
+        width: 80vh;
+        height: 80vh;
+    }
+}
+@media (max-width: 1100px) {
+    html {
+        font-size: 1.4vh;
+    }
+}
+
+@media (max-width: 810px) {
+    html {
+        font-size: 1vh;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media (max-width: 450px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media (max-width: 400px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 350px) {
+    html {
+        font-size: 8px;
+    }
+}
